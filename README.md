@@ -1,6 +1,6 @@
 # router-js
 
-This .NET app consists on creating a web user's sign-up/log-in page for the Competitive Programming Network (RPC).
+Simple Router building in JavaScript
 
 ## **Built With** 🛠️
 
