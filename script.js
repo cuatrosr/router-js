@@ -26,3 +26,29 @@ function about() {
 
     app_div.appendChild(div);
 };
+
+function route (path, template) {
+    if (typeof template == 'function') {
+        return routes[path] = template;
+    }
+    else if (typeof template == 'string') {
+        return routes[path] = templates[template];
+    } else {
+        return;
+    };
+};
+
+function template (name, templateFunction) {
+    return templates[name] = templateFunction;
+};
+
+template('home', function(){
+    home();
+});
+
+template('about', function(){
+    about();
+});
+
+route('/', 'home');
+route('/about', 'about');
