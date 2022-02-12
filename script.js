@@ -1,18 +1,20 @@
+//David Montaño Tamayo || Daniela Olarte Borja
+
 let routes = {};
 let templates = {};
-
+let crnt;
 let app_div = document.getElementById('app');
 
 function home() {
     let div = document.createElement('div');
     let link = document.createElement('a');
     link.href = '#/about';
-    link.innerText = 'About';
+    link.innerText = 'about';
 
     div.innerHTML = '<h1>Home</h1>';
     div.appendChild(link);
 
-    app_div.appendChild(div);
+    verification(div);
 };
 
 function about() {
@@ -24,7 +26,7 @@ function about() {
     div.innerHTML = '<h1>About</h1>';
     div.appendChild(link);
 
-    app_div.appendChild(div);
+    verification(div);
 };
 
 function route (path, template) {
@@ -70,3 +72,15 @@ function router(evt) {
 
 window.addEventListener('load', router);
 window.addEventListener('hashChange', router);
+
+function verification(div){
+    
+    if(crnt==null){
+        
+        app_div.appendChild(div);
+        crnt=div;
+    }else{
+        app_div.replaceChild(div,crnt);
+        crnt=div;
+    }
+};
