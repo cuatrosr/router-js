@@ -2,19 +2,21 @@
 
 let routes = {};
 let templates = {};
-let crnt;
 let app_div = document.getElementById('app');
 
 function home() {
     let div = document.createElement('div');
     let link = document.createElement('a');
     link.href = '#/about';
-    link.innerText = 'about';
+    link.innerText = 'About';
 
+    link.onclick = function () {  
+        location.href="#/about"
+        location.reload();
+    }
     div.innerHTML = '<h1>Home</h1>';
     div.appendChild(link);
-
-    verification(div);
+    app_div.appendChild(div);
 };
 
 function about() {
@@ -23,10 +25,13 @@ function about() {
     link.href = '#/';
     link.innerText = 'Home';
 
+    link.onclick = function () {  
+        location.href="#/"
+        location.reload();
+    }
     div.innerHTML = '<h1>About</h1>';
     div.appendChild(link);
-
-    verification(div);
+    app_div.appendChild(div); 
 };
 
 function route (path, template) {
@@ -73,14 +78,3 @@ function router(evt) {
 window.addEventListener('load', router);
 window.addEventListener('hashChange', router);
 
-function verification(div){
-    
-    if(crnt==null){
-        
-        app_div.appendChild(div);
-        crnt=div;
-    }else{
-        app_div.replaceChild(div,crnt);
-        crnt=div;
-    }
-};
