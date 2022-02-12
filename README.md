@@ -5,7 +5,9 @@ This .NET app consists on creating a web user's sign-up/log-in page for the Comp
 ## **Built With** 🛠️
 
 <p align="left">
-    <a href="https://code.visualstudio.com/" target="_blank"> <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.solucionex.com%2Fblog%2Fprogramacion-remota-traves-de-ssh-con-visual-studio-code&psig=AOvVaw1Y6qJtExFbZAePHHEyZcQv&ust=1644787130249000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKjp_9qL-_UCFQAAAAAdAAAAABAD" height="60" width = "60"></a>
+    <a href="https://www.javascript.com/" target="_blank"> <img src="https://e7.pngegg.com/pngimages/87/538/png-clipart-javascript-scalable-graphics-logo-encapsulated-postscript-javascript-icon-text-logo-thumbnail.png" height="60" width = "60"></a>
+    <a href="https://code.visualstudio.com/" target="_blank"> <img src="https://www.solucionex.com/sites/default/files/posts/imagen/vscode-800x450.png" height="60" width = "60"></a>
+     <a href="https://html.com/" target="_blank"> <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" height="60" width = "60"></a>
 </p>
 
 ## **Versioned** 📌
