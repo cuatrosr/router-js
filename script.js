@@ -21,17 +21,17 @@ function about() {
     link.href = '#/';
     link.innerText = 'Home';
 
-    div.innerText = '<h1>About</h1>';
+    div.innerHTML = '<h1>About</h1>';
     div.appendChild(link);
 
     app_div.appendChild(div);
 };
 
 function route (path, template) {
-    if (typeof template == 'function') {
+    if (typeof template === 'function') {
         return routes[path] = template;
     }
-    else if (typeof template == 'string') {
+    else if (typeof template === 'string') {
         return routes[path] = templates[template];
     } else {
         return;
@@ -52,3 +52,21 @@ template('about', function(){
 
 route('/', 'home');
 route('/about', 'about');
+
+function resolveRoute(route) {
+    try {
+        return routes[route];
+    } catch (e) {
+        throw new Error(`Route ${route} not found`);
+    };
+};
+
+function router(evt) {
+    let url = window.location.hash.slice(1) || '/';
+    let route = resolveRoute(url);
+
+    route();
+};
+
+window.addEventListener('load', router);
+window.addEventListener('hashChange', router);
